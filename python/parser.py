@@ -52,19 +52,19 @@ while True:
     NEXT_FRAME_OFFSET               = VENDOR_SPECIFIC_TAG2          + data[VENDOR_SPECIFIC_TAG2]           + 20 # skip 20 bytes of tail that I dont know the purpose of. (yet)
     
     # Print debug data.
-    print("FRAME_NUMBER: " + str(FRAME_NUMBER))
-    print("DEST_ADDR: " + str(data[DEST_ADDR]))
-    print("SRC_ADDR: " + str(data[SRC_ADDR]))
-    print("SSID HEX: " + getHexString(data,SSID,data[SSID_LENGTH]))
-    print("SSID ASCII: " + hexStringToAscii(getHexString(data,SSID,data[SSID_LENGTH])))
-    print("SSID_LENGTH: " + str(data[SSID_LENGTH]))
-    print("SUPPORTED_TAG_LENGTH: " + str(data[SUPPORTED_TAG_LENGTH]))
+    print("FRAME_NUMBER:                  " + str(FRAME_NUMBER))
+    print("DEST_ADDR:                     " + getHexString(data,DEST_ADDR,6))
+    print("SRC_ADDR:                      " + getHexString(data,SRC_ADDR,6))
+    print("SSID HEX:                      " + getHexString(data,SSID,data[SSID_LENGTH]))
+    print("SSID ASCII:                    " + hexStringToAscii(getHexString(data,SSID,data[SSID_LENGTH])))
+    print("SSID_LENGTH:                   " + str(data[SSID_LENGTH]))
+    print("SUPPORTED_TAG_LENGTH:          " + str(data[SUPPORTED_TAG_LENGTH]))
     print("SUPPORTED_TAG_EXTENDED_LENGTH: " + str(data[ SUPPORTED_TAG_EXTENDED_LENGTH]))
-    print("DS_TAG_LENGTH: " + str(data[DS_TAG_LENGTH]))
-    print("HT_TAG_LENGTH: " + str(data[HT_TAG_LENGTH]))
-    print("VENDOR_SPECIFIC_TAG: " + str(data[VENDOR_SPECIFIC_TAG]))
-    print("VENDOR_SPECIFIC_TAG2: " + str(data[VENDOR_SPECIFIC_TAG2]))
-    print("NEXT_FRAME_OFFSET: " + str(NEXT_FRAME_OFFSET) + " (" + str(NEXT_FRAME_OFFSET - FRAME_OFFSET) + ")")
+    print("DS_TAG_LENGTH:                 " + str(data[DS_TAG_LENGTH]))
+    print("HT_TAG_LENGTH:                 " + str(data[HT_TAG_LENGTH]))
+    print("VENDOR_SPECIFIC_TAG:           " + str(data[VENDOR_SPECIFIC_TAG]))
+    print("VENDOR_SPECIFIC_TAG2:          " + str(data[VENDOR_SPECIFIC_TAG2]))
+    print("NEXT_FRAME_OFFSET:             " + str(NEXT_FRAME_OFFSET) + " (" + str(NEXT_FRAME_OFFSET - FRAME_OFFSET) + ")")
     
     # Set the offset to the start of the next frame.
     FRAME_OFFSET = NEXT_FRAME_OFFSET
