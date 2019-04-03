@@ -1,13 +1,15 @@
 #!/bin/sh
-DEVICE="wlp1s0"
+DEVICE=$(printenv 'MONITOR_DEVICE')
 
 #Turn monitor-mode for DEVICE on.
 on() {
 	echo "Switching monitor-mode for $DEVICE on."
 	echo "Taking $DEVICE down."
 	ifconfig $DEVICE down
+#	sleep 2
 	echo "Setting $DEVICE to monitor-mode."
 	iwconfig $DEVICE mode monitor
+#	sleep 2
 	echo "Taking $DEVICE up."
 	ifconfig $DEVICE up
 }
