@@ -34,7 +34,13 @@ CREATE TABLE 'ap' (
    apID INT UNSIGNED NOT NULL AUTO_INCREMENT,
    apName VARCHAR(32) NOT NULL,
    apPlatform VARCHAR(255),
-   apNetworkdev VARCHAR(255),
+   
+   apNetworkdevIntern VARCHAR(255),
+   apNetworkdevInternMAC VARCHAR(17),
+   
+   apNetworkdevExtern VARCHAR(255),
+   apNetworkdevExternMAC VARCHAR(17),
+   
    apComment VARCHAR(255),
    PRIMARY KEY(apID)
 )
