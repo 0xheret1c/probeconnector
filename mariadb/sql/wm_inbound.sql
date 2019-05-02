@@ -1,8 +1,6 @@
 /*
     Datenbank für Rohdaten
 */
-DROP DATABASE IF EXISTS wminbound;
-
 CREATE DATABASE IF NOT EXISTS wminbound;
 USE wminbound;
 /*
