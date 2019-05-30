@@ -1,0 +1,25 @@
+#test{
+    background-color: red;
+}
+#titel{
+    height: 80px;
+    padding-top:20px;
+    padding-left: 15px;
+}
+
+#filter{
+    height: 545px;
+}
+
+#karte{
+    height: 545px;
+}
+
+#lupe{
+    float: left;
+}
+
+#begrenzung{
+    overflow:hidden;
+    height: 545px;
+}
