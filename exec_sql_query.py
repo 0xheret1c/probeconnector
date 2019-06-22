@@ -38,8 +38,10 @@ def exec_query(query):
         cursor = connection.cursor()
         cursor.execute(str(query))
         print("Executed: " + str(query))
-    except:
+    except Exception,e:
         print("Failed to insert into DB!\n Query: "+query+"\r\n")
+        print(e)
+
 
 
 if(len(sys.argv)== 2):

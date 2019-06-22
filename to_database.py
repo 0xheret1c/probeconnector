@@ -39,7 +39,7 @@ def sendToDB(data):
     __time      = "\'" + _time           + "\'"
 
     # Built the query . 
-    quer = "INSERT INTO data (apID,sessionID,sigStrength,strength,sourceMAC,time) VALUES (" + _apnum + "," + _cursession + "," + _strength + "," + _source+ ","+__time + "\');"
+    quer = "INSERT INTO data (apID,sessionID,sigStrength,sourceMAC,time) VALUES (" + _apnum + "," + _cursession + "," + _strength + "," + _source+ ","+__time + ");"
     
     # Execute the query; Add quotation marks so the arg gets transfered as one string, and not as multiple args.
     os.system("./exec_sql_query.py \"" + quer + "\"")
